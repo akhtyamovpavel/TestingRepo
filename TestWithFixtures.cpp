@@ -24,6 +24,11 @@ int TestWithFixtures::GetElement(size_t index) {
   return TestWithFixtures::very_big_array_.at(index);
 }
 
+void TestWithFixtures::TearDown() {
+  for (int i = 0; i < 10; ++i) {
+    very_big_array_[i] -= 10;
+  }
+}
 
 TEST_F(TestWithFixtures, LastElementGot) {
   EXPECT_EQ(TestWithFixtures::GetElement(10000), 10000);
@@ -34,5 +39,5 @@ TEST_F(TestWithFixtures, FirstElements) {
 }
 
 TEST_F(TestWithFixtures, UpdateElements) {
-  EXPECT_EQ(TestWithFixtures::GetElement(0), 0);
+  EXPECT_EQ(TestWithFixtures::GetElement(0), 10);
 }
