@@ -1,33 +1,34 @@
 cmake_minimum_required(VERSION 3.8)
 project(Testing)
 
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" ${CMAKE_SOURCE_DIR}/cmake)
 
 set(CMAKE_CXX_STANDARD 11)
-
-#add_executable(OutputTesting main.cpp my_first_function.cpp)
-
-if (APPLE)
-    add_definitions(-DGTEST_USE_OWN_TR1_TUPLE)
-    add_definitions(-D__GLIBCXX__)
-endif (APPLE)
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Testing_SOURCE_DIR}/bin)
 
 
 find_package(GTest REQUIRED)
+find_package(GMock REQUIRED)
 find_package(Threads REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GMOCK_INCLUDE_DIRS})
+
+add_subdirectory(00-start-test)
+add_subdirectory(01-set-up-tear-down)
+add_subdirectory(02-testing-singleton)
 
 add_executable(
-    RunTests
-    cmake_test.cpp
-    test.cpp
+    Main
+    main.cpp
     my_first_function.cpp
-    TestWithFixtures.cpp
 )
 
-target_link_libraries(RunTests ${GTEST_LIBRARIES} Threads::Threads)
+#target_link_libraries(RunTests ${GTEST_LIBRARIES} Threads::Threads)
 
 enable_testing()
-add_test(Tests RunTests)
+
+add_test(Test01 00-start-test/00_start_test)
+add_test(Test00 01-set-up-tear-down/01_setup_teardown)
+
 

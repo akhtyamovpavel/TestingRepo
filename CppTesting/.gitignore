@@ -1,0 +1,7 @@
+*idea*
+*cmake-build-debug*
+build/
+bin/*
+!bin/.gitkeep
+!bin/time.txt
+!bin/mock.txt
