@@ -28,7 +28,8 @@ add_executable(
 
 enable_testing()
 
-add_test(Test01 00-start-test/00_start_test)
-add_test(Test00 01-set-up-tear-down/01_setup_teardown)
+add_test(Test00 ${Testing_SOURCE_DIR}/bin/00_start_test)
+add_test(Test01 ${Testing_SOURCE_DIR}/bin/01_setup_teardown)
+add_test(Test02 ${Testing_SOURCE_DIR}/bin/02_testing_singleton)
 
 
