@@ -1,5 +1,5 @@
 pytest
-Flask==0.12.2
+Flask==1.0
 selenium==3.11.0
 pytest-flask==0.10.0
 mock
