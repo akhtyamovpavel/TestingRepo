@@ -14,15 +14,10 @@ find_package(Threads REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 include_directories(${GMOCK_INCLUDE_DIRS})
 
+add_subdirectory(simple-test)
 add_subdirectory(00-start-test)
 add_subdirectory(01-set-up-tear-down)
 add_subdirectory(02-testing-singleton)
-
-add_executable(
-    Main
-    main.cpp
-    my_first_function.cpp
-)
 
 #target_link_libraries(RunTests ${GTEST_LIBRARIES} Threads::Threads)
 
