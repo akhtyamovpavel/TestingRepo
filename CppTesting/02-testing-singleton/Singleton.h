@@ -7,16 +7,18 @@
 #include <vector>
 #include <string>
 
+class MockSingleton;
+
 class Singleton {
  public:
   static Singleton* GetInstance();
   std::vector<std::string> ReadFile() const;
- protected:
-  Singleton();
  private:
+  Singleton();
   static Singleton* instance;
   static bool initialized;
   virtual std::string GetFile() const;
+  friend class MockSingleton;
 };
 
 

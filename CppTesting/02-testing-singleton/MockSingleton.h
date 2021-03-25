@@ -9,7 +9,7 @@
 
 class MockSingleton: public Singleton {
  public:
-  MOCK_CONST_METHOD0(GetFile, std::string());
+  MOCK_METHOD(std::string, GetFile, (), (const, override));
 };
 
 

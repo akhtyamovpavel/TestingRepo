@@ -3,7 +3,7 @@ project(Testing)
 
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" ${CMAKE_SOURCE_DIR}/cmake)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${Testing_SOURCE_DIR}/bin)
 
 
@@ -18,6 +18,7 @@ add_subdirectory(simple-test)
 add_subdirectory(00-start-test)
 add_subdirectory(01-set-up-tear-down)
 add_subdirectory(02-testing-singleton)
+add_subdirectory(03-mock-example)
 
 #target_link_libraries(RunTests ${GTEST_LIBRARIES} Threads::Threads)
 
