@@ -1,7 +1,0 @@
-[
-  "02-pytest/pytest_scopes.py::test_setup",
-  "02-pytest/pytest_tests.py::test_tree_opener",
-  "02-pytest/pytest_tests.py::test_dir_opener",
-  "02-pytest/pytest_tests.py::test_depths_two",
-  "02-pytest/pytest_tests.py::test_not_directory"
-]

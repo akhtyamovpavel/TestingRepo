@@ -1,7 +1,7 @@
 pytest
-Flask==0.12.2
+Flask
 selenium==3.11.0
-pytest-flask==0.10.0
+pytest-flask
 mock
 pytest-mock
 bs4

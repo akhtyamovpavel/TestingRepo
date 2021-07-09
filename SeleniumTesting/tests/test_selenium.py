@@ -8,7 +8,7 @@ import time
 @pytest.fixture(scope='session')
 def chrome_driver():
     options = webdriver.ChromeOptions()
-    options.binary_location = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    # options.binary_location = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     options.add_argument('window-size=800x600')
 
     driver = webdriver.Chrome(chrome_options=options)

@@ -12,5 +12,8 @@ float square(float x) {
 }
 
 float my_sqrt(float x) {
+  if (x > 10) {
+	return x;
+  }
   return static_cast<float>(sqrt(x));
 }
