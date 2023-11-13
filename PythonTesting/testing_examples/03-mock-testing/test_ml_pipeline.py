@@ -29,4 +29,3 @@ def test_dump_num_calls(mock_dump_fn, dump_folder):
     dumper.train_model(num_epochs=3)
 
     assert 3 == mock_dump_fn.call_count  # Check that function was called three times
-

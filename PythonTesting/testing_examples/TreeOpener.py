@@ -1,5 +1,6 @@
 import os
 
+
 class TreeOpener(object):
     def __init__(self, folder, with_dir=False):
         self.folder = folder
@@ -23,4 +24,3 @@ class TreeOpener(object):
             else:
                 result.append(new_file)
         return result
-

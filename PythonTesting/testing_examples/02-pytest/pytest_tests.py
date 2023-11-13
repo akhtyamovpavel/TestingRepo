@@ -1,5 +1,4 @@
 import os
-import unittest
 
 import pytest
 
@@ -11,6 +10,7 @@ def test_tree_opener():
     assert [
         os.path.join('assets', '1.txt')
     ] == tree_opener.run()
+
 
 def test_dir_opener():
     tree_opener: TreeOpener = TreeOpener('assets', with_dir=True)

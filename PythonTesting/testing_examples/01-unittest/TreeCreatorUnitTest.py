@@ -25,11 +25,11 @@ class MyTestCase(unittest.TestCase):
         tree_opener: TreeOpener = TreeOpener(self.folder_path, with_dir=True)
         self.assertEqual(
             tree_opener.run(), [
-            self.folder_path,
-            os.path.join(self.folder_path, 'assets_test_1'),
-            self.first_test_name
-        ])
-
+                self.folder_path,
+                os.path.join(self.folder_path, 'assets_test_1'),
+                self.first_test_name
+            ]
+        )
 
 
 if __name__ == '__main__':

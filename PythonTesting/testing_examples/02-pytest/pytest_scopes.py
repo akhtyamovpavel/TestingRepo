@@ -24,7 +24,7 @@ def folders():
 def test_setup(folders):
     tree_opener: TreeOpener = TreeOpener(folders['folder_path'], with_dir=True)
     assert [
-            folders['folder_path'],
-            os.path.join(folders['folder_path'], 'assets_test_1'),
-            folders['first_test_name']
+        folders['folder_path'],
+        os.path.join(folders['folder_path'], 'assets_test_1'),
+        folders['first_test_name']
     ] == tree_opener.run()
